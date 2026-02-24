@@ -1,0 +1,68 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false,
+  },
+  "disable_ai": true,
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "vim": {
+    "default_mode": "normal",
+    "use_system_clipboard": "always",
+  },
+  // Editor Appearance
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "theme": "Matte Black",
+  "icon_theme": "Material Icon Theme",
+  "current_line_highlight": "all",
+  "gutter": {
+    "runnables": false,
+    "breakpoints": true,
+    "line_numbers": true,
+    "folds": false,
+  },
+  "toolbar": {
+    "selections_menu": true,
+    "agent_review": false,
+    "breadcrumbs": true,
+    "code_actions": false,
+    "quick_actions": true,
+  },
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_sign_in": false,
+    "show_menus": false,
+  },
+  // Tabs
+  "max_tabs": 3,
+  "tab_bar": {
+    "show": false,
+  },
+  // Panels
+  "project_panel": {
+    "dock": "right",
+    "default_width": 320,
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "right",
+  },
+  "git_panel": {
+    "button": false,
+    "dock": "right",
+    "tree_view": true,
+  },
+}

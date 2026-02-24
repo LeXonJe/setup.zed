@@ -1,0 +1,176 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Dock || Terminal || Editor",
+    "bindings": {
+      // Window's motions
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "context": "GitPanel",
+    "bindings": {
+      "q": "git_panel::Close",
+    },
+  },
+  // Outline panel
+  {
+    "context": "OutlinePanel && not_editing",
+    "bindings": {
+      // VIM Movement
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrevious",
+      "g g": "menu::SelectFirst",
+      "shift-g": "menu::SelectLast",
+
+      // Close
+      "space e": "workspace::ToggleRightDock",
+      "q": "workspace::ToggleRightDock",
+      "escape": "outline_panel::ToggleFocus",
+
+      // Global Keybinds
+      ":": "command_palette::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f p": "projects::OpenRecent",
+    },
+  },
+  // File panel
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "/": "project_panel::NewSearchInDirectory",
+      "%": "project_panel::NewFile",
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+
+      // VIM Movement
+      "h": "project_panel::CollapseSelectedEntry",
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrevious",
+      "l": "project_panel::ExpandSelectedEntry",
+      "enter": "project_panel::OpenPermanent",
+      "o": "project_panel::OpenPermanent",
+      "g g": "menu::SelectFirst",
+      "shift-g": "menu::SelectLast",
+      "-": "project_panel::SelectParent",
+
+      // Close
+      "space e": "workspace::ToggleRightDock",
+      "q": "workspace::ToggleRightDock",
+      "escape": "project_panel::ToggleFocus",
+
+      // Global Keybinds
+      ":": "command_palette::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f p": "projects::OpenRecent",
+    },
+  },
+  // Empty pane, set of keybindings that are available when there is no active editor
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      ":": "command_palette::Toggle",
+
+      // Open file finder
+      "space f f": "file_finder::Toggle",
+
+      // Open recent project
+      "space f p": "projects::OpenRecent",
+
+      // New file
+      "space n": "workspace::NewFile",
+    },
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // [C]ode
+      // -- Refactoring
+      "space c f": "editor::Format",
+      "space c r ": "editor::Rename",
+      // -- LSP & Code actions
+      "space c a": "editor::ToggleCodeActions",
+      "space c d": "editor::Hover",
+
+      // [F]ind
+      "space f f": "file_finder::Toggle",
+      "space f p": "projects::OpenRecent",
+      "space f b": "tab_switcher::Toggle",
+
+      // [N]otification
+      "space n c": "workspace::ClearAllNotifications",
+      "space n s": "workspace::SuppressNotification",
+
+      // [G]oto
+      // -- Git
+      "space g g": [
+        "task::Spawn",
+        {
+          "task_name": "lazygit",
+          "reveal_target": "center",
+        },
+      ],
+      "space g b": "git::Blame",
+      // -- LSP
+      // Jump to hunks
+      "g h": "editor::GoToHunk",
+      "g p h": "editor::GoToPreviousHunk",
+      // Jump to diagnostic
+      "g d": "editor::GoToDiagnostic",
+      "g p d": "editor::GoToPreviousDiagnostic",
+
+      // File [E]xplorer
+      "space e": "vim::ToggleProjectPanelFocus",
+
+      // [O]utline
+      "space o": "outline_panel::ToggleFocus",
+
+      // [S]earch
+      "space s o": "outline::Toggle",
+      "space s d": "diagnostics::Deploy",
+      "space s s": "workspace::NewSearch",
+      // Search word under cursor in all panes
+      "space s W": "pane::DeploySearch",
+
+      // [T]oggle
+      "space t h": "editor::ToggleInlayHints",
+
+      // [W]indow management
+      "space w h": "pane::SplitLeft",
+      "space w j": "pane::SplitDown",
+      "space w k": "pane::SplitUp",
+      "space w l": "pane::SplitRight",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      // Line's Motions
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp",
+    },
+  },
+  {
+    "context": "Editor && menu && showing_code_actions",
+    "bindings": {
+      "j": "editor::ContextMenuNext",
+      "k": "editor::ContextMenuPrevious",
+      "q": "editor::ToggleCodeActions",
+    },
+  },
+]
