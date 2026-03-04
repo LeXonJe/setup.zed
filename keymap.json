@@ -86,6 +86,9 @@
     "bindings": {
       ":": "command_palette::Toggle",
 
+      // Open file explorer
+      "space e": "vim::ToggleProjectPanelFocus",
+
       // Open file finder
       "space f f": "file_finder::Toggle",
 
