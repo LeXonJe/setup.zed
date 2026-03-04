@@ -65,4 +65,20 @@
     "dock": "right",
     "tree_view": true,
   },
+  // LSP
+  "lsp": {
+    "tinymist": {
+      "settings": {
+        "formatterMode": "typstyle",
+      },
+      "initialization_options": {
+        "preview": {
+          "background": {
+            "enabled": true,
+            "args": [],
+          },
+        },
+      },
+    },
+  },
 }
