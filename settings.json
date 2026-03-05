@@ -80,5 +80,11 @@
         },
       },
     },
+    "codebook": {
+      "initialization_options": {
+        "globalConfigPath": "~/.config/zed/codebook.toml",
+        "checkWhileTyping": true,
+      },
+    },
   },
 }
