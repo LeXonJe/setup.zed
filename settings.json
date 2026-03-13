@@ -67,6 +67,11 @@
   },
   // LSP
   "lsp": {
+    "jdtls": {
+      "settings": {
+        "lombok_support": true,
+      },
+    },
     "tinymist": {
       "settings": {
         "formatterMode": "typstyle",

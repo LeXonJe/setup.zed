@@ -89,6 +89,15 @@
       // Open file explorer
       "space e": "vim::ToggleProjectPanelFocus",
 
+      // Open LazyGit
+      "space g g": [
+        "task::Spawn",
+        {
+          "task_name": "lazygit",
+          "reveal_target": "center",
+        },
+      ],
+
       // Open file finder
       "space f f": "file_finder::Toggle",
 
