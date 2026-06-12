@@ -119,11 +119,6 @@
       "space c a": "editor::ToggleCodeActions",
       "space c d": "editor::Hover",
 
-      // [F]ind
-      "space f f": "file_finder::Toggle",
-      "space f p": "projects::OpenRecent",
-      "space f b": "tab_switcher::Toggle",
-
       // [N]otification
       "space n c": "workspace::ClearAllNotifications",
       "space n s": "workspace::SuppressNotification",
@@ -149,15 +144,16 @@
       // File [E]xplorer
       "space e": "vim::ToggleProjectPanelFocus",
 
-      // [O]utline
-      "space o": "outline_panel::ToggleFocus",
+      // [F]ind
+      "space f p": "projects::OpenRecent",
+      "space f f": "file_finder::Toggle",
+      "space f o": "outline::Toggle",
+      "space f b": "tab_switcher::Toggle",
 
       // [S]earch
-      "space s o": "outline::Toggle",
       "space s d": "diagnostics::Deploy",
       "space s s": "workspace::NewSearch",
-      // Search word under cursor in all panes
-      "space s W": "pane::DeploySearch",
+      "space s W": "pane::DeploySearch", // Search word under cursor in all panes
 
       // [T]oggle
       "space t h": "editor::ToggleInlayHints",
