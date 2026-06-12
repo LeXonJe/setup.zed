@@ -112,10 +112,8 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       // [C]ode
-      // -- Refactoring
       "space c f": "editor::Format",
       "space c r ": "editor::Rename",
-      // -- LSP & Code actions
       "space c a": "editor::ToggleCodeActions",
       "space c d": "editor::Hover",
 
@@ -124,7 +122,6 @@
       "space n s": "workspace::SuppressNotification",
 
       // [G]oto
-      // -- Git
       "space g g": [
         "task::Spawn",
         {
@@ -133,11 +130,8 @@
         },
       ],
       "space g b": "git::Blame",
-      // -- LSP
-      // Jump to hunks
       "g h": "editor::GoToHunk",
       "g p h": "editor::GoToPreviousHunk",
-      // Jump to diagnostic
       "g d": "editor::GoToDiagnostic",
       "g p d": "editor::GoToPreviousDiagnostic",
 
